@@ -1,0 +1,92 @@
+canvas {
+  border: 1px solid grey;
+}
+
+body {
+  margin: 10px;
+  padding: 0;
+  background: linear-gradient(179deg, #53c68c ,  #9fdf9f,  #00b359,  #009933 );
+background-size: 400% 400%;
+animation: green 20s ease infinite;
+}
+
+
+@keyframes green { 
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+.one {
+  color: white;
+  text-align: center;
+   text-transform: uppercase;
+   text-shadow: 3px 2px darkgreen;
+  border: 6px dotted lightyellow;
+}
+
+.two {
+  color: white;
+  text-align: center;
+   text-transform: uppercase;
+   text-shadow: 3px 2px darkgreen;
+  border: 6px dotted lightyellow;
+   transform: rotateX(150deg);
+ 
+}
+
+#canvas-1 {
+   border: 15px dotted white
+}
+
+/* div {
+  text-align: center;
+    text-shadow: 3px 2px white;
+ color: darkorange;
+font-size: 60px;
+} */
+
+a:link {
+  text-align: center;
+  margin: 150px;
+   padding: 16px;
+    text-shadow: 3px 2px white;
+ color: darkorange;
+font-size: 60px;
+      text-decoration: none;
+}
+
+a:hover {
+  color: white;
+    text-shadow: 3px 2px darkorange;
+}
+
+#link {
+    text-align: center;
+  margin: 230px;
+   padding: 16px;
+    text-shadow: 3px 2px green;
+ color: white;
+font-size: 30px;
+      text-decoration: none;
+}
+
+.a {
+  color: darkgreen
+}
+
+.b {
+  color: green
+}
+
+.c {
+  color: lightgreen
+}
+
+.d {
+  color: orange
+}
+
+.e {
+  color: darkorange
+}
