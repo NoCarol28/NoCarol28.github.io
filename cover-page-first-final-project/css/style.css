@@ -245,4 +245,185 @@ font-family: "Yantramanav", sans-serif;
   -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (max-width: 600px) {
+  
+  p {
+font-family: "Yantramanav", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  animation: flow 30s ease-in-out infinite;
+  background: linear-gradient(-60deg, #8effca,  #ee7752,  #33ffbb, #ab69b0, #006666);
+  background-size: 300%;
 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h3 {
+/*   color: yellow; */
+    animation: flow 30s ease-in-out infinite;
+  background: linear-gradient(-60deg, #8effca,  #ee7752,  #33ffbb, #ab69b0, #006666);
+  background-size: 300%; 
+  
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+    text-align: center;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 58px;
+    text-transform: uppercase;
+    font: {
+      family: 'Montserrat', sans-serif;
+/*       size: 90px; */
+      weight: 900;
+    }
+    color: white;
+    -webkit-box-reflect: below 0 -webkit-gradient(
+      linear, 
+      left top, 
+      left bottom,
+      from(transparent), 
+      color-stop(0.3, transparent),
+      to(white)
+    );
+    mix-blend-mode: overlay;
+  }
+  .teacher:active {
+  color: green;
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin: 10px;
+  padding: 14px;
+  text-align: center;
+}
+  .navigation li {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 10px;
+  color: #006080;
+  border: 2px solid white;
+}
+
+.navigation li.logo {
+  color: #006080;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  border-style: solid;
+  border-color: white;
+}
+
+.navigation li.sub {
+  color: #006080;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#banner {
+  background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-636447976.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+#banner .content .title {
+  border: 3px dotted white;
+  background-color: #006080;
+  position: relative;
+  top: 30px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+#banner .content .name {
+  border: 3px dotted white;
+  background-color: lightblue;
+  position: relative;
+  top: 20px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.name {
+  color: #006080;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  border: 3px solid white;
+}
+
+h1 {
+  color: #e6f2ff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.share a {
+  background: #006080;
+  border: 1px solid #006080;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.share a:hover {
+  background: white;
+  border: 1px solid #006080;
+  color: #006080;
+}
+
+.teacher{
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin: auto 10px;
+  padding: 14px;
+  text-align: center;
+  animation: flow 30s ease-in-out infinite;
+  background: linear-gradient(-60deg, #e3cde5,#99ffcc, #ccccff,  #ef7f5d);
+  background-size: 300%; 
+  
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.teacher:hover {
+/*   color: yellow; */
+    text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin: auto 10px;
+  padding: 14px;
+  text-align: center;
+  animation: flow 30s ease-in-out infinite;
+  background: linear-gradient(-60deg,#e73c7e, #904e95, #ee7752, #904e95);
+  background-size: 300%; 
+  
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+}
