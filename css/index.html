@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <a class="back" href="https://nocarol28.github.io/cover-page-first-final-project/"> BACK</a>
+
+<h2>Carol Nobili's Website</h2>
+  <h1>CSS</h1>
+<br>
+<br>
+  <p>Things I have learned this year in CSS:</p>
+
+<br>
+<br>
+
+<!-- <p class="let" > <br> <br> I have learned this year that the let, var, and const command allows me to set a variable to equal something. Unlike the const command, the let and var command allow me to reassign the variable throughout the code. </p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+let myName = 'Carol'
+let myCity = 'Rio de Janeiro'
+console.log(`My name is ${myName}. My favorite city is ${myCity}`);
+
+</code></pre>
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that the an if statement checks a condition and execute a task if that condition evaluates to true. I also learned that if...else statements execute different code blocks based on a provided condition. </p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+let athleteFinalPosition = 'first place';
+switch(athleteFinalPosition) {  
+  case 'first place':
+		console.log('You get the gold medal!');
+		break;
+    case 'second place':
+		console.log('You get the silver medal!');
+		break;
+  	case 'third place':
+		console.log('You get the bronze medal!');
+  default: 
+    console.log('No medal awarded.');
+		break;
+} 
+
+</code></pre>
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that a "function is a reusable block of code that groups together a sequence of statements to perform a specific task." I also learned that a parameter is inside of the paranthesis of a function. To call a function, you can simply use the identifier with parenthesis afterwards.</p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+  }
+  console.log(plantNeedsWater);
+};
+  plantNeedsWater();
+
+</code></pre>
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that arrays are created with brackets and they store data. I have also learned that arrays have a length property, which allows you to see how many items are in an array. </p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+const concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);
+
+console.log(concept);
+
+function removeElement(newArr) {
+  newArr.pop()
+}
+
+removeElement(concept)
+
+console.log(concept)
+
+</code></pre>
+
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that loops are a way to run the same code repeatedly, each time with a different value. I have also learned that there are four different types of loops: for loops, for/in loops, while loops, and do/while loops. The type of loop I used the most were the for loops. For loops allow me to repeat the sequence of code. 
+
+</p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+for (let i = 0; i < rapperArray.length; i++){
+  console.log(rapperArray[i]);
+  if (rapperArray[i] ===  'Notorious B.I.G.'){
+    break;
+  }
+}
+console.log("And if you don't know, now you know.");
+
+</code></pre>
+
+<br><br>
+<hr> -->
+<p class="codepen" data-height="397" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="oQBaaM" data-preview="true" style="height: 397px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Ice Cream">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/oQBaaM/">
+  Ice Cream</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br>
+<br>
+
+<p class="let" > <br> <br> For this CSS project I created a website that demonstrates my abilities to style a page using CSS coding. Some CSS coding strategies I used for this project includes, font styles, text alignment, display, width, margin, padding, color change, letter spazing, position, and more.
+
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+body {
+  margin: 10;
+  padding: 0;
+  background: linear-gradient(179deg, #ffcccc ,  #ffff99 );
+background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+h1 {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 200;
+}
+
+div.a {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+div.b {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+ol {
+  padding: 10;
+  margin: 0;
+}
+
+li {
+  color: #006699;
+  display: inline-block;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 20px 18px 10px 18px;
+  text-transform: uppercase;
+}
+
+/* .active {
+  color: #88CCF1;
+} */
+
+/* Table */
+
+table {
+  height: 40%;
+  left: 10%;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 80%;
+}
+
+th {
+  background:#ffaa80
+}
+
+td{
+  color:#ff884d
+}
+
+thead th {
+  background: #006699;
+  color: #FF0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+th, td {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px;
+  text-align: left;
+  width: 33.3333%;
+}
+/* 
+.search {
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  color: #AAA;
+  padding: 20px;
+  margin: 50px auto 0px auto;
+  width: 77%;
+} */
+
+a:link {
+    color:  #990073; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+a:hover {
+    color: #000066;
+    background-color: #c2f0f0;
+    text-decoration: none;
+}
+
+/*  {
+    background: linear-gradient(to bottom, #ffffff 0%, #ff99cc 100%)
+} */
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+3 weeks
+<br>
+</p> 
+
+<ul>
+  <li>30% Research</li>
+  <li>20% Writing Code</li>
+  <li>35% Debugging</li>
+  <li>15% Styling</li>
+</ul>
+
+<br>
+<br>
+<hr>
+<br><br>
+
+<p class="codepen" data-height="404" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="RqOwQN" data-preview="true" style="height: 404px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="illusion">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/RqOwQN/">
+  illusion</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> For this CSS project I used my knowledge of color changes and font styles to create a fun and unique project. This project incorporates my knowledge of java script and my java script project as well as css styling. I used a CSS animated gradient, border styles, colors for each specific class for each letter, and different font styles and sizes.
+
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+
+canvas {
+  border: 1px solid grey;
+/*   width: 100%; */
+}
+
+body {
+  margin: 10;
+  padding: 0;
+  background: linear-gradient(179deg, #ffcccc ,  #ffff99 );
+background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+h1{
+  text-align: center;
+  border-style: dotted;
+   border-width: 2px 3px 4px 3px;
+  border-color: red green blue yellow;
+  background-color: #C0C0C0;
+  
+}
+
+p{
+  text-align: center;
+}
+
+.a {
+  color:green;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+}
+
+.b{
+  color:red;
+   font-style: italic;
+     font-size: 40px;
+  
+}
+
+.c{
+  color:blue;
+      font-style: oblique;
+   font-size: 30px;
+}
+
+.d{
+  color:#F0E68C;
+      font-size: 24px;
+}
+
+.e{
+  color:orange;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.f{
+  color:pink;
+  font-size: 1.875em;
+   font-variant: small-caps;
+}
+
+.g{
+  color:magenta;
+   font-size: 0.875em;
+    text-transform: lowercase;
+}
+
+.h{
+  color:aqua;
+  text-transform: uppercase;
+   font-style: italic;
+}
+
+.i{
+  color:seagreen;
+  font-size: 50px;
+}
+
+.j{
+  color:coral;
+     font-size: 20px;
+}
+
+.k{
+  color:violet;
+     font-style: italic;
+     font-size: 40px;
+}
+
+.l{
+  color:lightblue;
+       font-size: 35px;
+  text-transform: uppercase;
+   font-style: italic;
+}
+
+.m{
+  color:turquoise;
+  font-weight: 900;
+  
+}
+
+.n{
+  color:	#FFEFD5;
+  font-weight: bold;
+  
+}
+
+.o{
+  color:maroon;
+     font-style: italic;
+     font-size: 20px;
+}
+
+.p{
+  color:#800020;
+  font-size: 28px;
+}
+
+.q{
+  color:crimson;
+  font-stretch: expanded;
+  font-size: 48px;
+}
+
+.r{
+  color:darkblue
+}
+
+.s{
+  color:#6495ed;
+  font-size: 48px;
+}
+
+.t{
+  color:royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.u{
+  color:indiga
+}
+
+.v{
+  color:navy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+}
+
+.w{
+  color:darkgreen
+}
+
+.x{
+  color:lightpink;
+    font-size: 38px;
+}
+
+.y{
+  color:#bab86c;
+    text-transform: uppercase;
+    
+}
+
+.ab {
+  color: turquoise;
+}
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+3 weeks
+<br>
+</p> 
+
+<ul>
+  <li>30% Research</li>
+  <li>20% Writing Code</li>
+  <li>35% Debugging</li>
+  <li>15% Styling</li>
+</ul>
+
+<br>
+<br>
+<p class=let><br><br></p>
+
+<p class="codepen" data-height="372" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="jQgaZE" data-preview="true" style="height: 372px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="love">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/jQgaZE/">
+  love</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> For this CSS project I used my knowledge of CSS animations to create a fun and interactive project. 
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+    animation-name: block;
+  animation-duration: 30s;
+  animation-timing-function: infinite;
+}
+
+
+@keyframes block {
+  0%   {background-color:#cc0000; left:10px; top:20px;}
+  25%  {background-color:#9900ff; left:200px; top:0px;}
+  50%  {background-color:#993366; left:200px; top:200px;}
+  75%  {background-color:#ff9966; left:0px; top:200px;}
+  100% {background-color:red; left:10px; top:20px;}
+}
+
+h1 {
+    font-style: italic;
+     font-size: 60px;
+  text-align: center
+}
+
+.a{
+  color:  #ff9900;
+   border-radius: 50%;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 15px;
+    animation-name: a;
+  animation-duration: 120s;
+  animation-timing-function: infinite;
+}
+
+@keyframes a {
+  0%   {background-color:#cc0000; left:10px; top:20px;}
+  25%  {background-color:#cc80ff; left:200px; top:0px;}
+  50%  {background-color:#c6538c; left:200px; top:200px;}
+  75%  {background-color:#ff9999; left:0px; top:200px;}
+  100% {background-color:#ff8080; left:10px; top:20px;}
+}
+
+.b{
+  color:#CD5C5C;
+  border-radius: 50%;
+  display: inline-block;
+   padding-left: 5px;
+  padding-right: 5px;
+    animation-name: b;
+  animation-duration: 120s;
+  animation-timing-function: infinite;
+}
+
+@keyframes b {
+  0%   {background-color:#4d004d; left:10px; top:20px;}
+  25%  {background-color:#993399; left:200px; top:0px;}
+  50%  {background-color:#993366; left:200px; top:200px;}
+  75%  {background-color:#ff9966; left:0px; top:200px;}
+  100% {background-color:#990099; left:10px; top:20px;}
+}
+
+.c{
+  color:#ff4d4d;
+  border-radius: 50%;
+  display: inline-block;
+   padding-left: 5px;
+  padding-right: 5px;
+    animation-name: c;
+  animation-duration: 120s;
+  animation-timing-function: infinite;
+}
+
+@keyframes c {
+  0%   {background-color: #d580ff; left:10px; top:20px;}
+  25%  {background-color:#ff99cc; left:200px; top:0px;}
+  50%  {background-color:#d9b3ff; left:200px; top:200px;}
+  75%  {background-color:#ffff99; left:0px; top:200px;}
+  100% {background-color:#ff9966; left:10px; top:20px;}
+}
+
+.d{
+  color:#660066;
+  border-radius: 50%;
+  display: inline-block;
+   padding-left: 5px;
+  padding-right: 5px;
+    animation-name: d;
+  animation-duration: 120s;
+  animation-timing-function: infinite;
+}
+
+@keyframes d {
+  0%   {background-color:#ff99ff; left:10px; top:20px;}
+  25%  {background-color: #ffb3ff; left:200px; top:0px;}
+  50%  {background-color:#ff8080; left:200px; top:200px;}
+  75%  {background-color:#e60000; left:0px; top:200px;}
+  100% {background-color:#ff884d; left:10px; top:20px;}
+}
+
+.dota {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+    animation-name: block;
+  animation-duration: 20s;
+  animation-timing-function: infinite;
+}
+
+body {
+  margin: 10;
+  padding: 0;
+  background: linear-gradient(179deg, #ff9999,  #ffff99 );
+background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+2 weeks
+<br>
+</p> 
+
+<ul>
+  <li>20% Research</li>
+  <li>35% Writing Code</li>
+  <li>25% Debugging</li>
+  <li>20% Styling</li>
+</ul>
+
+<br>
+<br>
+<p class=let><br><br></p>
+
+<p class="codepen" data-height="413" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="JwoWZM" data-preview="true" style="height: 413px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Book Online Library">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/JwoWZM/">
+  Book Online Library</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> For this CSS project I created an online library to that allows the user to navigate through cool book title and information. This is a useful project that also incorporates my knowledge of images and links.
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+h1 {
+  color: darkgreen;
+  text-align: center;
+  text-shadow: 3px 2px white;
+  -webkit-animation: colorchange 5s infinite alternate;
+  text-shadow: 3px 2px white;
+  /*   animation-name: a;
+  animation-duration: 120s;
+  animation-timing-function: infinite; */
+}
+
+/* @keyframes a {
+  0%   {background-color:#cc0000; left:10px; top:20px;}
+  25%  {background-color:#cc80ff; left:200px; top:0px;}
+  50%  {background-color:#c6538c; left:200px; top:200px;}
+  75%  {background-color:#ff9999; left:0px; top:200px;}
+  100% {background-color:#ff8080; left:10px; top:20px;}
+}
+ */
+.a {
+  color: green;
+  font-size: 20px;
+  position: absolute;
+  -webkit-animation: colorchange 5s infinite alternate;
+  text-shadow: 3px 2px white;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: lightblue;
+  }
+  10% {
+    color: green;
+  }
+  20% {
+    color: darkyellow;
+  }
+  30% {
+    color: orange;
+  }
+  40% {
+    color:  #0099cc;
+  }
+  50% {
+    color: darkgreen;
+  }
+  60% {
+    color: darkblue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #339966;
+  }
+  100% {
+    color: pink;
+  }
+}
+
+
+
+body {
+  margin: 10;
+  padding: 0;
+  background: linear-gradient(179deg, #ffcccc, #ffff99);
+  background-size: 400% 400%;
+  -webkit-animation: pinkyellow 10s ease infinite;
+  -moz-animation: pinkyellow 10s ease infinite;
+  animation: pinkyellow 10s ease infinite;
+  padding: 5px;
+}
+
+@-webkit-keyframes pinkyellow {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+@-moz-keyframes pinkyellow {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+@keyframes pinkyellow {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+2 weeks
+<br>
+</p> 
+
+<ul>
+  <li>20% Research</li>
+  <li>15% Writing Code</li>
+  <li>30% Debugging</li>
+  <li>35% Styling</li>
+</ul>
+
+<br>
+<br>
+
+<p class=let><br><br></p>
+
+<h3> Projects for the future:
+</h3>
+
+<br>
+<br>
+
+<h4>
+Fun games<br>
+Visually appealing projects
+</h4>
+
+
+
+<br><br>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js'></script>
+
+  
+
+</body>
+
+</html>
