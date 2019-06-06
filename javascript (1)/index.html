@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <a class="back" href="https://nocarol28.github.io/cover-page-first-final-project/"> BACK</a>
+
+<h2>Carol Nobili's Website</h2>
+  <h1>Javascript</h1>
+<br>
+<br>
+  <p>Things I have learned this year in JavaScript:</p>
+
+<br>
+<br>
+
+<p class="let" > <br> <br> I have learned this year that the let, var, and const command allows me to set a variable to equal something. Unlike the const command, the let and var command allow me to reassign the variable throughout the code. </p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+let myName = 'Carol'
+let myCity = 'Rio de Janeiro'
+console.log(`My name is ${myName}. My favorite city is ${myCity}`);
+
+</code></pre>
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that the an if statement checks a condition and execute a task if that condition evaluates to true. I also learned that if...else statements execute different code blocks based on a provided condition. </p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+let athleteFinalPosition = 'first place';
+switch(athleteFinalPosition) {  
+  case 'first place':
+		console.log('You get the gold medal!');
+		break;
+    case 'second place':
+		console.log('You get the silver medal!');
+		break;
+  	case 'third place':
+		console.log('You get the bronze medal!');
+  default: 
+    console.log('No medal awarded.');
+		break;
+} 
+
+</code></pre>
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that a "function is a reusable block of code that groups together a sequence of statements to perform a specific task." I also learned that a parameter is inside of the paranthesis of a function. To call a function, you can simply use the identifier with parenthesis afterwards.</p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+  }
+  console.log(plantNeedsWater);
+};
+  plantNeedsWater();
+
+</code></pre>
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that arrays are created with brackets and they store data. I have also learned that arrays have a length property, which allows you to see how many items are in an array. </p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+const concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);
+
+console.log(concept);
+
+function removeElement(newArr) {
+  newArr.pop()
+}
+
+removeElement(concept)
+
+console.log(concept)
+
+</code></pre>
+
+
+<br><br>
+
+<p class="let" > <br> <br> I have learned this year that loops are a way to run the same code repeatedly, each time with a different value. I have also learned that there are four different types of loops: for loops, for/in loops, while loops, and do/while loops. The type of loop I used the most were the for loops. For loops allow me to repeat the sequence of code. 
+
+</p>  
+
+<br>
+
+<pre><code class="language-javascript">
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+for (let i = 0; i < rapperArray.length; i++){
+  console.log(rapperArray[i]);
+  if (rapperArray[i] ===  'Notorious B.I.G.'){
+    break;
+  }
+}
+console.log("And if you don't know, now you know.");
+
+</code></pre>
+
+<br><br>
+<hr>
+<br><br>
+
+<p class="codepen" data-height="413" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="oPKVqJ" data-preview="true" style="height: 413px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" ball game">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/oPKVqJ/">
+   ball game</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br>
+<br>
+
+<p class="let" > <br> <br> For this JavaScript project, I was interested and determined to create an interactive game. This is called the ball game. I used my knowledge of gradient background, physics, functions, if statements, and variables to make this project. In the future I hope to make many more interactive projects like this.
+
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+
+function setupCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+setupCanvas();
+window.onresize = function() {
+  setupCanvas();
+};
+
+//___________________get mouse input___________________
+
+// let mouse = {
+//   down: false,
+//   x: 0,
+//   y: 0
+// };
+// canvas.addEventListener("mousemove", event => {
+//   mouse.x = event.clientX;
+//   mouse.y = event.clientY;
+// });
+// canvas.addEventListener("mousedown", event => {
+//   mouse.down = true;
+//   // console.log(mouse);
+// });
+// canvas.addEventListener("mouseup", event => {
+//   mouse.down = false;
+// });
+
+//___________________get keyboard input___________________
+
+const keys = [];
+document.onkeydown = function(e) {
+  keys[e.keyCode] = true;
+  // console.log(e.keyCode);
+};
+document.onkeyup = function(e) {
+  keys[e.keyCode] = false;
+};
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+grd.addColorStop(0, "#0066cc");
+grd.addColorStop(1, "#00ccff");
+
+//"#6699ff"
+//"#ff99ff"
+
+//ball1 var
+let ballX = canvas.width / 8;
+let ballY = canvas.height / 5;
+let ballXVelocity = 4.5;
+let ballYVelocity = 4;
+const ballRadius = 10;
+
+//ball2 var
+let ballX2 = canvas.width / 5;
+let ballY2 = canvas.height / 5;
+let ballX2Velocity = 4.5;
+let ballY2Velocity = 4.5;
+const ball2Radius = 10;
+
+//ball 3
+let ballX3 = canvas.width / 2;
+let ballY3 = canvas.height / 5;
+let ballX3Velocity = 4.5;
+let ballY3Velocity = 4.5;
+const ball3Radius = 10;
+
+//paddle var
+const paddleHeight = 10;
+const paddleWidth = 100;
+let paddleX = canvas.width / 2 - paddleWidth / 2;
+let paddleY = canvas.height - 200;
+
+//___________________animation loop ___________________
+
+//ball 1
+function cycle() {
+  ballX += ballXVelocity;
+  ballY += ballYVelocity;
+
+  if (ballX + ballRadius > canvas.width) {
+    ballXVelocity = -Math.abs(ballXVelocity);
+  }
+  if (ballX - ballRadius < 0) {
+    ballXVelocity = Math.abs(ballXVelocity);
+  }
+
+  if (ballY + ballRadius > canvas.height) {
+    ballYVelocity = 0;
+    ballXVelocity = 0;
+  }
+  if (ballY - ballRadius < 0) {
+    ballYVelocity = Math.abs(ballYVelocity);
+  }
+
+  if (ballY)
+    if (
+      ballX < paddleX + paddleWidth &&
+      ballX + ballRadius > paddleX &&
+      ballY < paddleY + ballRadius &&
+      ballY + paddleHeight > paddleY
+    ) {
+      if (ballY < paddleY) {
+        ballXVelocity = Math.abs(ballXVelocity);
+        ballYVelocity = -Math.abs(ballYVelocity);
+      }
+    }
+
+  //ball 2
+  ballX2 -= ballX2Velocity;
+  ballY2 -= ballY2Velocity;
+
+  if (ballX2 + ball2Radius > canvas.width) {
+    ballX2Velocity = Math.abs(ballX2Velocity);
+  }
+  if (ballX2 - ball2Radius < 0) {
+    ballX2Velocity = -Math.abs(ballX2Velocity);
+  }
+
+  if (ballY2 + ball2Radius > canvas.height) {
+    ballY2Velocity = 0;
+    ballX2Velocity = 0;
+  }
+  if (ballY2 - ball2Radius < 0) {
+    ballY2Velocity = -Math.abs(ballY2Velocity);
+  }
+
+  if (
+    ballX2 < paddleX + paddleWidth &&
+    ballX2 + ball2Radius > paddleX &&
+    ballY2 < paddleY + ball2Radius &&
+    ballY2 + paddleHeight > paddleY
+  ) {
+    if (ballY2 < paddleY) {
+      ballX2Velocity = -Math.abs(ballX2Velocity);
+      ballY2Velocity = Math.abs(ballY2Velocity);
+    }
+  }
+
+  //ball 3
+  ballX3 -= ballX3Velocity;
+  ballY3 -= ballY3Velocity;
+
+  //wall collisions
+  if (ballX3 + ball3Radius > canvas.width) {
+    ballX2Velocity = Math.abs(ballX3Velocity);
+  }
+  if (ballX3 - ball3Radius < 0) {
+    ballX3Velocity = -Math.abs(ballX3Velocity);
+  }
+
+  if (ballY3 + ball3Radius > canvas.height) {
+    ballY3Velocity = 0;
+    ballX3Velocity = 0;
+  }
+  if (ballY3 - ball3Radius < 0) {
+    ballY3Velocity = -Math.abs(ballY3Velocity);
+  }
+
+  //paddle collision
+  if (
+    ballX3 < paddleX + paddleWidth &&
+    ballX3 + ball3Radius > paddleX &&
+    ballY3 < paddleY + ball3Radius &&
+    ballY3 + paddleHeight > paddleY
+  ) {
+    if (ballY3 < paddleY) {
+      ballX3Velocity = -Math.abs(ballX3Velocity);
+      ballY3Velocity = Math.abs(ballY3Velocity);
+    }
+  }
+
+  //ctx.fillStyle="#6699ff"
+  //ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+  // Fill with gradient
+  ctx.fillStyle = grd;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.beginPath();
+  ctx.arc(ballX, ballY, 10, 0, 2 * Math.PI);
+  ctx.fillStyle = "#ccff99";
+  //"#003300";
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(ballX2, ballY2, 10, 0, 2 * Math.PI);
+  ctx.fillStyle = "#ccff99";
+  //"#ffffff";
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(ballX3, ballY3, 10, 0, 2 * Math.PI);
+  ctx.fillStyle = "#ccff99";
+  //"#ffffff";
+  ctx.fill();
+
+  if (keys[37]) {
+    paddleX -= 4;
+  } else if (keys[39]) {
+    paddleX += 4;
+  }
+
+  if (keys[38]) {
+    paddleY -= 4;
+  } else if (keys[40]) {
+    paddleY += 4;
+  }
+
+  ctx.fillStyle = "#ff5050";
+  ctx.fillRect(paddleX, paddleY, paddleWidth, paddleHeight);
+
+  if (
+    ballY3 + ball3Radius > canvas.height &&
+    ballY2 + ball2Radius > canvas.height &&
+    ballY + ballRadius > canvas.height
+  ) {
+    ctx.font = "100px Georgia";
+    ctx.fillStyle = "#0048cc";
+    ctx.fillText("YOU LOST", 150, canvas.height / 2);
+  }
+ 
+
+  requestAnimationFrame(cycle);
+}
+requestAnimationFrame(cycle);
+
+if ((ballRadius = canvas.height)) {
+}
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+3 weeks
+<br>
+</p> 
+
+<ul>
+  <li>30% Research</li>
+  <li>20% Writing Code</li>
+  <li>35% Debugging</li>
+  <li>15% Styling</li>
+</ul>
+
+<br>
+<br>
+<hr>
+<br><br>
+
+
+<p class="codepen" data-height="369" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="VVeprO" data-preview="true" style="height: 369px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="for loop project1B">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/VVeprO/">
+  for loop project1B</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<p class="codepen" data-height="397" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="Pydozm" data-preview="true" style="height: 397px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="for loop project">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/Pydozm/">
+  for loop project</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> For these JavaScript projects, I used my knowledge of for loops,if/else statements, mouse commands, functions, variables, random colors and gradient background. This project shows my initial steps towards creating more interactive and distinctive projects. 
+
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+
+function setupCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  globalCompositeOperation= 'source-over'
+}
+setupCanvas();
+window.onresize = function() {
+  setupCanvas();
+};
+
+// ctx.fillRect(20, 20, 150, 100);
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+grd.addColorStop(0, "#00cc99");
+grd.addColorStop(1, "#0099cc");
+
+//___________________get mouse input___________________
+
+let mouse = {
+  down: false,
+  x: 0,
+  y: 0
+};
+canvas.addEventListener("mousemove", event => {
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
+});
+canvas.addEventListener("mousedown", event => {
+  mouse.down = true;
+   //console.log(mouse);
+});
+canvas.addEventListener("mouseup", event => {
+  mouse.down = false;
+});
+
+//___________________animation loop ___________________
+  let ball = [];
+for (let i = 0; i < 330; ++i) {
+  ball.push({
+    position:
+    {
+      x: canvas.width* Math.random(),
+      y: canvas.height* Math.random(),   
+    },
+    radius: 7*Math.random(),
+  
+    velocity: {
+      x: 4*(Math.random()-0.5),
+      y: 4*(Math.random()-0.5)
+      
+    }
+  });
+}
+
+function randomClr() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16)
+  }
+
+function roundB (x, y, size){
+  ctx.fillStyle = randomClr()
+  ctx.beginPath();
+  ctx.arc(x, y, size + 2, 0, 2 * Math.PI)
+  ctx.fill();
+}
+
+function cycle() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    // Fill with gradient
+  ctx.fillStyle = grd;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+   //draw
+    
+  for (let i = 0; i < ball.length; ++i) {
+    //physics
+     ball[i].position.x += ball[i].velocity.x
+    ball[i].position.y += ball[i].velocity.y
+  roundB(
+      ball[i].position.x,
+      ball[i].position.y,
+      ball[i].radius)
+     
+    if (ball[i].position.x < 0){
+      ball[i].position.x = 0
+      ball[i].velocity.x = Math.abs(ball[i].velocity.x)
+    }
+    if (ball[i].position.y < 0){
+      ball[i].position.y = 0
+      ball[i].velocity.y = Math.abs(ball[i].velocity.y)
+    }
+    if (ball[i].position.x > canvas.width){
+      ball[i].position.x = canvas.width
+     ball[i].velocity.x = -Math.abs(ball[i].velocity.x)
+    }
+    if (ball[i].position.y > canvas.height){
+      ball[i].position.y = canvas.height
+      ball[i].velocity.y = -Math.abs(ball[i].velocity.y)
+    }
+  
+   if (mouse.down){
+        const dx = ball[i].position.x - mouse.x;
+        const dy = ball[i].position.y - mouse.y;
+        const d2 = Math.max(dx * dx + dy * dy, 100);
+        const mag = 500 / d2 / Math.sqrt(d2);
+        ball[i].velocity.x -= mag  * dx;
+        ball[i].velocity.y -= mag  * dy;      
+    }
+  }
+   
+ 
+  
+    
+  
+  
+  
+  requestAnimationFrame(cycle);
+}
+requestAnimationFrame(cycle);
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+3 weeks
+<br>
+</p> 
+
+<ul>
+  <li>30% Research</li>
+  <li>20% Writing Code</li>
+  <li>35% Debugging</li>
+  <li>15% Styling</li>
+</ul>
+
+<br>
+<br>
+<p class=let><br><br></p>
+
+<p class="codepen" data-height="397" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="wQvzzm" data-preview="true" style="height: 397px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="project3A">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/wQvzzm/">
+  project3A</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<p class="codepen" data-height="399" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="jQNjmG" data-preview="true" style="height: 399px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="for loop project3B">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/jQNjmG/">
+  for loop project3B</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> For these JavaScript projects, I used my knowledge of for loops,if/else statements, mouse commands, functions, variables, gradient background, rotation, and translation. These projects show my skills and understanding of JavaScript as well as my dedication towards my projects. When producing these projects I intended to make it aesthetically and visually appealing.
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+
+function setupCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  globalCompositeOperation = "source-over";
+}
+setupCanvas();
+window.onresize = function() {
+  setupCanvas();
+};
+
+// ctx.fillRect(20, 20, 150, 100);
+
+
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+grd.addColorStop(0, "#00cc99");
+grd.addColorStop(1, "#0099cc");
+
+//___________________get mouse input___________________
+
+let mouse = {
+  down: false,
+  x: 0,
+  y: 0
+};
+canvas.addEventListener("mousemove", event => {
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
+});
+canvas.addEventListener("mousedown", event => {
+  mouse.down = true;
+  //console.log(mouse);
+});
+canvas.addEventListener("mouseup", event => {
+  mouse.down = false;
+});
+
+//___________________get keyboard input___________________
+
+// const keys = [];
+// document.onkeydown = function(e) {
+//   keys[e.keyCode] = true;
+//   //console.log(e.keyCode);
+// };
+// document.onkeyup = function(e) {
+//   keys[e.keyCode] = false;
+// };
+
+//___________________animation loop ___________________
+let ball = [];
+for (let i = 0; i < 400; ++i) {
+  ball.push({
+    position: {
+      x: canvas.width * Math.random(),
+      y: canvas.height * Math.random()
+    },
+    radius: 7 * Math.random(),
+
+    velocity: {
+      x: 3 * (Math.random() - 0.5),
+      y: 3 * (Math.random() - 0.5)
+    }
+  });
+}
+
+
+function roundB(x, y, size) {
+  ctx.fillStyle = "#FF9900";
+  ctx.beginPath();
+  ctx.arc(x, y, size + 1.5, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+function cycle() {
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.globalAlpha = 0.3;
+  ctx.translate(canvas.width / 2, canvas.height / 2);
+  ctx.rotate(200 * Math.PI / 180);
+
+  // ctx.fillStyle = randomClr();
+
+  // Fill with gradient
+    ctx.fillStyle = grd;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  //draw
+
+  for (let i = 0; i < ball.length; ++i) {
+    //physics
+    ball[i].position.x += ball[i].velocity.x;
+    ball[i].position.y += ball[i].velocity.y;
+    roundB(ball[i].position.x, ball[i].position.y, ball[i].radius);
+
+    if (ball[i].position.x < 0) {
+      ball[i].position.x = 0;
+      ball[i].velocity.x = Math.abs(ball[i].velocity.x);
+    }
+    if (ball[i].position.y < 0) {
+      ball[i].position.y = 0;
+      ball[i].velocity.y = Math.abs(ball[i].velocity.y);
+    }
+    if (ball[i].position.x > canvas.width) {
+      ball[i].position.x = canvas.width;
+      ball[i].velocity.x = -Math.abs(ball[i].velocity.x);
+    }
+    if (ball[i].position.y > canvas.height) {
+      ball[i].position.y = canvas.height;
+      ball[i].velocity.y = -Math.abs(ball[i].velocity.y);
+    }
+
+    // if (mouse.down) {
+    //   const dx = ball[i].position.x - mouse.x;
+    //   const dy = ball[i].position.y - mouse.y;
+    //   const d2 = Math.max(dx * dx + dy * dy, 100);
+    //   const mag = 500 / d2 / Math.sqrt(d2);
+    //   ball[i].velocity.x -= mag * dx;
+    //   ball[i].velocity.y -= mag * dy;
+    // }
+  }
+
+  // ctx.rotate(200 * Math.PI / 180);
+  // ctx.translate(canvas.width, canvas.height);
+  // ctx.beginPath();
+
+  // function drawRec() {
+  //   for (let i = 0; i < 20; i++) ctx.moveTo(75, 50);
+  //   ctx.lineTo(100, 65);
+  //   ctx.lineTo(100, 35);
+  //   ctx.fillStyle = "white";
+  //   ctx.fill();
+  // }
+
+  ctx.rotate(-(Math.PI / 180));
+  ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+  requestAnimationFrame(cycle);
+}
+requestAnimationFrame(cycle);
+
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+2 weeks
+<br>
+</p> 
+
+<ul>
+  <li>20% Research</li>
+  <li>35% Writing Code</li>
+  <li>25% Debugging</li>
+  <li>20% Styling</li>
+</ul>
+
+<br>
+<br>
+<p class=let><br><br></p>
+
+<p class="codepen" data-height="373" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="oaKrZg" data-preview="true" style="height: 373px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="for loop project3">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/oaKrZg/">
+  for loop project3</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> For this JavaScript project, I used my knowledge of for loops,if/else statements, mouse commands, functions, variables, gradient background, physics, rotation, and translation. This project demonstrates my skills and understanding of JavaScript as well as my dedication towards my projects. When producing this project I intended to make it aesthetically and visually appealing. This project is an extension of the projects described above; however, it includes more colors and motion.
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+
+function setupCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  globalCompositeOperation = "source-over";
+}
+setupCanvas();
+window.onresize = function() {
+  setupCanvas();
+};
+
+// ctx.fillRect(20, 20, 150, 100);
+
+function randomClr() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16)
+  }
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+grd.addColorStop(0, randomClr());
+grd.addColorStop(1, randomClr());
+
+//___________________get mouse input___________________
+
+let mouse = {
+  down: false,
+  x: 0,
+  y: 0
+};
+canvas.addEventListener("mousemove", event => {
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
+});
+canvas.addEventListener("mousedown", event => {
+  mouse.down = true;
+  //console.log(mouse);
+});
+canvas.addEventListener("mouseup", event => {
+  mouse.down = false;
+});
+
+//___________________get keyboard input___________________
+
+// const keys = [];
+// document.onkeydown = function(e) {
+//   keys[e.keyCode] = true;
+//   //console.log(e.keyCode);
+// };
+// document.onkeyup = function(e) {
+//   keys[e.keyCode] = false;
+// };
+
+//___________________animation loop ___________________
+let ball = [];
+for (let i = 0; i < 300; ++i) {
+  ball.push({
+    position: {
+      x: canvas.width * Math.random(),
+      y: canvas.height * Math.random()
+    },
+    radius: 7 * Math.random(),
+
+    velocity: {
+      x: 3 * (Math.random() - 0.5),
+      y: 3 * (Math.random() - 0.5)
+    }
+  });
+}
+
+function roundB(x, y, size) {
+  ctx.fillStyle = randomClr();
+  ctx.beginPath();
+  ctx.arc(x, y, size + 2, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+function cycle() {
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+ 
+  
+
+ctx.globalAlpha=0.3
+ctx.translate(canvas.width / 2, canvas.height / 2);
+ctx.rotate(200 * Math.PI / 180);
+  
+      ctx.fillStyle = randomClr()
+        
+    
+  
+  // Fill with gradient
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  //draw
+
+  for (let i = 0; i < ball.length; ++i) {
+    //physics
+    ball[i].position.x += ball[i].velocity.x;
+    ball[i].position.y += ball[i].velocity.y;
+    roundB(ball[i].position.x, ball[i].position.y, ball[i].radius);
+
+    if (ball[i].position.x < 0) {
+      ball[i].position.x = 0;
+      ball[i].velocity.x = Math.abs(ball[i].velocity.x);
+    }
+    if (ball[i].position.y < 0) {
+      ball[i].position.y = 0;
+      ball[i].velocity.y = Math.abs(ball[i].velocity.y);
+    }
+    if (ball[i].position.x > canvas.width) {
+      ball[i].position.x = canvas.width;
+      ball[i].velocity.x = -Math.abs(ball[i].velocity.x);
+    }
+    if (ball[i].position.y > canvas.height) {
+      ball[i].position.y = canvas.height;
+      ball[i].velocity.y = -Math.abs(ball[i].velocity.y);
+    }
+
+    // if (mouse.down) {
+    //   const dx = ball[i].position.x - mouse.x;
+    //   const dy = ball[i].position.y - mouse.y;
+    //   const d2 = Math.max(dx * dx + dy * dy, 100);
+    //   const mag = 500 / d2 / Math.sqrt(d2);
+    //   ball[i].velocity.x -= mag * dx;
+    //   ball[i].velocity.y -= mag * dy;
+    // }
+  }
+
+  // ctx.rotate(200 * Math.PI / 180);
+  // ctx.translate(canvas.width, canvas.height);
+  // ctx.beginPath();
+
+  // function drawRec() {
+  //   for (let i = 0; i < 20; i++) ctx.moveTo(75, 50);
+  //   ctx.lineTo(100, 65);
+  //   ctx.lineTo(100, 35);
+  //   ctx.fillStyle = "white";
+  //   ctx.fill();
+  // }
+ 
+
+  ctx.rotate(-(Math.PI / 180));
+  ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+  requestAnimationFrame(cycle);
+}
+requestAnimationFrame(cycle);
+
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+2 weeks
+<br>
+</p> 
+
+<ul>
+  <li>20% Research</li>
+  <li>15% Writing Code</li>
+  <li>30% Debugging</li>
+  <li>35% Styling</li>
+</ul>
+
+<br>
+<br>
+<p class=let><br><br></p>
+
+
+<p class="codepen" data-height="412" data-theme-id="0" data-default-tab="result" data-user="pericarol" data-slug-hash="oarRVv" data-preview="true" style="height: 412px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="for loop project2">
+  <span>See the Pen <a href="https://codepen.io/pericarol/pen/oarRVv/">
+  for loop project2</a> by Carol Nobili (<a href="https://codepen.io/pericarol">@pericarol</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br><br> 
+<br>
+
+<p class="let" > <br> <br> This project is an extension of the projects illustrated above. For this JavaScript project, I used my knowledge of for loops,if/else statements, mouse commands, functions, variables, gradient background, physics, rotation, and translation. This project demonstrates my skills and understanding of JavaScript as well as my dedication towards my projects. When producing this project I intended to make it aesthetically and visually appealing. 
+</p>  
+
+<br><br>
+
+<pre><code class="language-javascript">
+
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+
+function setupCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  globalCompositeOperation = "source-over";
+}
+setupCanvas();
+window.onresize = function() {
+  setupCanvas();
+};
+
+// ctx.fillRect(20, 20, 150, 100);
+
+function randomClr() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16)
+  }
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+grd.addColorStop(0, randomClr());
+grd.addColorStop(1, randomClr());
+
+//___________________get mouse input___________________
+
+let mouse = {
+  down: false,
+  x: 0,
+  y: 0
+};
+canvas.addEventListener("mousemove", event => {
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
+});
+canvas.addEventListener("mousedown", event => {
+  mouse.down = true;
+  //console.log(mouse);
+});
+canvas.addEventListener("mouseup", event => {
+  mouse.down = false;
+});
+
+//___________________get keyboard input___________________
+
+// const keys = [];
+// document.onkeydown = function(e) {
+//   keys[e.keyCode] = true;
+//   //console.log(e.keyCode);
+// };
+// document.onkeyup = function(e) {
+//   keys[e.keyCode] = false;
+// };
+
+//___________________animation loop ___________________
+let ball = [];
+for (let i = 0; i < 300; ++i) {
+  ball.push({
+    position: {
+      x: canvas.width * Math.random(),
+      y: canvas.height * Math.random()
+    },
+    radius: 7 * Math.random(),
+
+    velocity: {
+      x: 3 * (Math.random() - 0.5),
+      y: 3 * (Math.random() - 0.5)
+    }
+  });
+}
+
+let angle = 0
+
+
+
+function roundB(x, y, size) {
+  ctx.fillStyle = "orange";
+  ctx.beginPath();
+  ctx.arc(x, y, size + 2, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+function cycle() {
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  
+   angle+= .1
+  
+ctx.globalAlpha=0.3  
+ctx.translate(canvas.width / 2, canvas.height / 2);
+ctx.rotate(angle);
+  
+ 
+  
+  // Fill with gradient
+  
+  ctx.fillStyle = grd;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  //draw
+
+  for (let i = 0; i < ball.length; ++i) {
+    //physics
+    ball[i].position.x += ball[i].velocity.x;
+    ball[i].position.y += ball[i].velocity.y;
+    roundB(ball[i].position.x, ball[i].position.y, ball[i].radius);
+
+    if (ball[i].position.x < 0) {
+      ball[i].position.x = 0;
+      ball[i].velocity.x = Math.abs(ball[i].velocity.x);
+    }
+    if (ball[i].position.y < 0) {
+      ball[i].position.y = 0;
+      ball[i].velocity.y = Math.abs(ball[i].velocity.y);
+    }
+    if (ball[i].position.x > canvas.width) {
+      ball[i].position.x = canvas.width;
+      ball[i].velocity.x = -Math.abs(ball[i].velocity.x);
+    }
+    if (ball[i].position.y > canvas.height) {
+      ball[i].position.y = canvas.height;
+      ball[i].velocity.y = -Math.abs(ball[i].velocity.y);
+    }
+
+    if (mouse.down) {
+      const dx = ball[i].position.x - mouse.x;
+      const dy = ball[i].position.y - mouse.y;
+      const d2 = Math.max(dx * dx + dy * dy, 100);
+      const mag = 500 / d2 / Math.sqrt(d2);
+      ball[i].velocity.x -= mag * dx;
+      ball[i].velocity.y -= mag * dy;
+    }
+  }
+
+  // ctx.rotate(200 * Math.PI / 180);
+  // ctx.translate(canvas.width, canvas.height);
+  // ctx.beginPath();
+
+  // function drawRec() {
+  //   for (let i = 0; i < 20; i++) ctx.moveTo(75, 50);
+  //   ctx.lineTo(100, 65);
+  //   ctx.lineTo(100, 35);
+  //   ctx.fillStyle = "white";
+  //   ctx.fill();
+  // }
+ 
+
+  ctx.rotate(-angle);
+  ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+  requestAnimationFrame(cycle);
+}
+requestAnimationFrame(cycle);
+
+
+</code></pre>
+
+<br><br>
+
+<p class="listTitle"> <br> Timeline:
+<br>
+</p> 
+
+<p class="listSubTitle">
+2 weeks
+<br>
+</p> 
+
+<ul>
+  <li>20% Research</li>
+  <li>15% Writing Code</li>
+  <li>30% Debugging</li>
+  <li>35% Styling</li>
+</ul>
+
+<br>
+<br>
+<p class=let><br><br></p>
+
+<h3> Projects for the future:
+<br>
+<br>
+</h3>
+
+<h4>
+Fun games<br>
+Visually appealing projects
+</h4>
+
+
+
+<br><br>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js'></script>
+
+  
+
+</body>
+
+</html>
